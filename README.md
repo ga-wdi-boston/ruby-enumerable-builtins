@@ -2,13 +2,9 @@
 
 # Ruby Enumerable Built-ins
 
-## Introduction
+## Instructions
 
-A list is an abstract data type (ADT) that represents an ordered list of items.  The list may be empty.  If not empty, the list has a first item followed by a list containing the rest of the items. This is not a rigorous definition.
-
-An enumerable is Ruby's implementation of `list`.
-
-We'll look at list processing techniques and the wide range of areas in which they are applicable.
+Fork, clone, branch (training), and bundle install.
 
 ## Objectives
 
@@ -18,9 +14,11 @@ By the end of this lesson, students should be able to:
 - Diagram the flow of Enumerable methods as invoked through concrete classes.
 - Give two examples of methods defined in Enumerable and available on all three of Range, Array, and Hash.
 
-## Instructions
+## Introduction
 
-Fork, clone, branch (lesson), and bundle install.
+A list is an abstract data type (ADT) that represents an ordered list of items.  The list may be empty.  If not empty, the list has a first item followed by a list containing the rest of the items. This is not a rigorous definition.
+
+Enumerable is Ruby's implementation of the `list` abstraction.
 
 ## Lists are ubiquitous
 
@@ -30,11 +28,11 @@ What are some types of lists?
 
 What are some things we'd put on those lists?
 
-## Ruby Arrays are Enumerable
+## Arrays as lists
 
-In Ruby, [Enumerable](http://ruby-doc.org/core-2.2.4/Enumerable.html) represents an abstraction of list.
+In JavaScript, the concept of list is built into Array. In Ruby, it is built into Enumerable which is included in Array.
 
-## Deeper look
+### Deeper look
 
 The following table contains a mapping of some of the methods that potentially touch all the elements in an Array.
 
@@ -47,11 +45,11 @@ JavaScript | Ruby
 `reduce` | `reduce`
 `some` | `any?`
 
-What do you notice?  Where are `any?` and `reduce`?
+Where is method `all?`?  Method `reduce`?
 
 ## The Enumerable Module
 
-Ruby's [Enumerable](http://ruby-doc.org/core-2.2.3/Enumerable.html) module provides many list processing methods based on the method `each`.  Ruby's Array class includes the Enumerable module.
+Ruby's [Enumerable](http://ruby-doc.org/core-2.2.3/Enumerable.html) module provides many list processing methods relying on a class's `each` method.  Ruby's Array class includes the Enumerable module.
 
 ### Modules
 
@@ -59,73 +57,47 @@ In Ruby, modules serve two purposes.  The first is to create name spaces.  The s
 
 The `Math` module hides mathematical functions inside the name-space `Math` so that short and common names don't pollute the global name-space (e.g. `Math::Pi` or `Math.cos`).
 
-The [Comparable](http://ruby-doc.org/core-2.2.3/Comparable.html) module provide common operators to a class that implements the `<=>` (spaceship) operator.  Let's look at `lib/card.rb`.
+The `Enumerable` module contains code implementing list methods in terms of a concrete classes `each` method.
 
-### Practice
+### The connection
 
-How do you compare cards?
-
-In your squads create an algorithm to determine which of two cards, if either, is "greater" than the other.
-
-### Demo
-
-Adding the spaceship operator to `Card`.
-
-### Practice - A list as a deck of cards
-
-Let's simulate Enumerable methods using a deck of cards.  In your squad, one of you will act as the method and another as the block.  The third squad member will record the result.
-
-### Code along
-
-Let's use the scripts `bin/people-array.js` and `bin/people-array.rb` to explore Array methods in both Ruby and JavaScript.  The data in the objects we'll be processing comes from the comma separated values (CSV) file `data/people.csv`
-
-The Person objects we'll test against have properties/methods that align with the headers in `data/people.csv` plus the method `age`
-
-### Practice
-
-Use the `bin/people-array.*` scripts to
-
-- Count all the people who are older than you (or just pick an age).  Younger.
-- Count all the people whose first name and last name start with the same letter.
-- Calculate the average age of all the people.
-
-## Files as lists
-
-Ruby's [File](http://ruby-doc.org/core-2.2.3/File.html) includes `Enumerable` so we can use all of those methods to process files a character or a line (the default) at a time.
-
-Other enumerable classes related to working with files include [IO](http://ruby-doc.org/core-2.2.3/IO.html), and [Dir](http://ruby-doc.org/core-2.2.3/Dir.html).
-
-I used the Ruby Standard Library class [CSV](http://ruby-doc.org/stdlib-2.2.3/libdoc/csv/rdoc/CSV.html) to load data for the `bin/*-array.rb` scripts.
-
-### Code along
-
-Using `bin/read-file.rb` we'll read all the lines in a file and print them.
-
-### Practice
-
-Let's modify that script to mimic the behavior of the `wc` (word count) utility.
-
-### Code along
-
-Now we'll read two files at the same time.  This is a good time to look at [Enumerator](http://ruby-doc.org/core-2.2.3/Enumerator.html) which is what gets returned when we call `each` without a block.
-
-We'll also need to look briefly at exception handling as Enumerator relies on this mechanism.
-
-## Cards in Ruby
-
-Let's explore the start of writing a card game in Ruby using `lib/card.rb` and `lib/deck.rb`.
+Let's diagram the delegation from Array to Enumerable and back.
 
 ## Ranges as lists
 
-Ruby's [Range](http://ruby-doc.org/core-2.2.3/Range.html) class provides a convenient way to express sequence of integers.
+Ruby's [Range](http://ruby-doc.org/core-2.2.3/Range.html) class provides a convenient way to express sequence of integers. Range includes Enumerable so we can treat instances as a list.
+
+### Demo
 
 ```ruby
-[1] pry(main)> 1..10
+> rng = 1..10
 ```
+
+### Code along
+
+Let's explore using Range as an enumerable in `bin/demo.rb`.
+
+### Lab
+
+In `bin/lab.rb`, use `reduce` to calculate the sum of all the even numbers in a Range.  All the odd numbers.  Now use `each_with_object` to do both at once.
 
 ## Hashes as lists
 
-[Hash](http://ruby-doc.org/core-2.2.3/Hash.html) includes Enumerable so we can treat it as a list
+[Hash](http://ruby-doc.org/core-2.2.3/Hash.html) includes Enumerable so we can treat it as a list.
+
+### Demo
+
+```ruby
+> h = {}
+```
+
+### Code along
+
+Let's explore using Hash as an enumerable in `bin/demo.rb`.
+
+### Lab
+
+In `bin/lab.rb`, use `reduce` to accumulate all of the keys and values in a Hash as Arrays.  Store these keys and values in a memo Hash with the keys `:keys` and `:values`.  Now use `each_with_object` to do the same.
 
 ## Additional resources
 
