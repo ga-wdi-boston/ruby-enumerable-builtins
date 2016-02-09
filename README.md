@@ -75,7 +75,7 @@ Ruby's [Range](http://ruby-doc.org/core-2.2.3/Range.html) class provides a conve
 
 ### Code along
 
-Let's explore using Range as an enumerable in `bin/demo.rb`.
+Let's explore using Range as an enumerable in `bin/code_along.rb`.
 
 ### Lab
 
@@ -93,7 +93,7 @@ In `bin/lab.rb`, use `reduce` to calculate the sum of all the even numbers in a 
 
 ### Code along
 
-Let's explore using Hash as an enumerable in `bin/demo.rb`.
+Let's explore using Hash as an enumerable in `bin/code_along.rb`.
 
 ### Lab
 
