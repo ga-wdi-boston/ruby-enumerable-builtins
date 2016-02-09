@@ -1,6 +1,6 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-# Ruby Enumerables
+# Ruby Enumerable Built-ins
 
 ## Introduction
 
@@ -14,14 +14,13 @@ We'll look at list processing techniques and the wide range of areas in which th
 
 By the end of this lesson, students should be able to:
 
-- Use `any?` and `all?` to test `Enumerables` elements
-- Use `map` to create an `Array` of transformed `Enumerable` elements
-- Use `reduce` to "summarize" the elements in an `Enumerable`
-- Process streams and strings as lists
+- Define “list” and give two examples of lists in Ruby.
+- Diagram the flow of Enumerable methods as invoked through concrete classes.
+- Give two examples of methods defined in Enumerable and available on all three of Range, Array, and Hash.
 
 ## Instructions
 
-Fork, clone, branch (lesson), npm install, and bundle install.
+Fork, clone, branch (lesson), and bundle install.
 
 ## Lists are ubiquitous
 
@@ -31,36 +30,9 @@ What are some types of lists?
 
 What are some things we'd put on those lists?
 
-## Array in JavaScript versus Ruby
+## Ruby Arrays are Enumerable
 
-We'll compare and contrast Ruby's [Array](http://ruby-doc.org/core-2.2.3/Array.html) with JavaScript's [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
-
-First let's compare the list of methods for Array in each language.
-
-### Demo
-
-Ruby and JavaScript Arrays both have a map and reduce method.  Let's explore using them to see the similarities and differences.
-
-Note that Ruby, by convention, denotes a predicate method with a terminal `?`.
-
-```ruby
-[1] pry(main)> fibs = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-```
-
-```js
-> var fibs = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34];
-```
-
-In JavaScript, we use a function to control the behavior of Array methods.  In Ruby, we use a block ( `{|p|}` for one line blocks, `do ... end` for multi-line blocks).
-
-### Practice
-
-Alternating between JavaScript and Ruby, write a script that:
-
-- calculates the sum of the first ten Fibonacci numbers
-- calculates the product of the first ten Fibonacci numbers
-- calculates the sum of the the odd Fibonacci numbers
-- calculates the product of the even Fibonacci numbers (excluding zero).
+In Ruby, [Enumerable](http://ruby-doc.org/core-2.2.4/Enumerable.html) represents an abstraction of list.
 
 ## Deeper look
 
@@ -151,21 +123,9 @@ Ruby's [Range](http://ruby-doc.org/core-2.2.3/Range.html) class provides a conve
 [1] pry(main)> 1..10
 ```
 
-### Code along - Stepped Range
-
-We'll build a new range class that increments by a provided value.  The requirement to creating an `Enumerable` is a correct implementation of the method `each`.
-
 ## Hashes as lists
 
 [Hash](http://ruby-doc.org/core-2.2.3/Hash.html) includes Enumerable so we can treat it as a list
-
-## Strings as lists
-
-We'll see how - **[String](http://ruby-doc.org/core-2.2.3/String.html)** can be treated as a lists even though it doesn't include Enumerable.  String accomplishes this using the methods that start `each_` which return an `Enumerator`.
-
-### Practice
-
-Let's implement `normalize_words`, `unique_words`, `word_count`, and `word_frequencies` in `lib/string.rb`
 
 ## Additional resources
 
@@ -175,3 +135,8 @@ Two images to give you a sense of the relationships in Ruby.
 - [And not](http://i.stack.imgur.com/1taqB.png)
 
 These images may diverge slightly from the actual relationships, Ruby is an evolving language, but do give a sense of much of what goes on.
+
+## [License](LICENSE)
+
+Source code distributed under the MIT license. Text and other assets copyright
+General Assembly, Inc., all rights reserved.
