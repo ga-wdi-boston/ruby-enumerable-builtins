@@ -68,7 +68,7 @@ The `Math` module hides mathematical functions inside the name-space `Math` so
  (e.g. `Math::Pi` or `Math.cos`).
 
 The `Enumerable` module contains code implementing list methods in terms of a
- concrete classes `each` method.
+ concrete class's `each` method.
 
 ### The connection
 
