@@ -54,7 +54,7 @@ Where is method `all?`?  Method `reduce`?
 
 ## The Enumerable Module
 
-Ruby's [Enumerable](http://ruby-doc.org/core-2.2.3/Enumerable.html) module
+Ruby's [Enumerable](http://ruby-doc.org/core-2.3.0/Enumerable.html) module
  provides many list processing methods relying on a class's `each` method.
 Ruby's Array class includes the Enumerable module.
 
@@ -76,7 +76,7 @@ Let's diagram the delegation from Array to Enumerable and back.
 
 ## Ranges as lists
 
-Ruby's [Range](http://ruby-doc.org/core-2.2.3/Range.html) class provides a
+Ruby's [Range](http://ruby-doc.org/core-2.3.0/Range.html) class provides a
  convenient way to express a sequence of integers.
 Range includes Enumerable so we can treat instances as a list.
 
@@ -98,7 +98,7 @@ All the odd numbers.  Now use `each_with_object` to do both at once.
 
 ## Hashes as lists
 
-[Hash](http://ruby-doc.org/core-2.2.3/Hash.html) includes Enumerable so we can
+[Hash](http://ruby-doc.org/core-2.3.0/Hash.html) includes Enumerable so we can
  treat it as a list.
 
 ### Demo - Hash
