@@ -65,7 +65,7 @@ The second is to supply common behavior to a class.
 
 The `Math` module hides mathematical functions inside the name-space `Math` so
  that short and common names don't pollute the global name-space
- (e.g. `Math::Pi` or `Math.cos`).
+ (e.g. `Math::PI` or `Math.cos`).
 
 The `Enumerable` module contains code implementing list methods in terms of a
  concrete class's `each` method.
