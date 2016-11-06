@@ -6,9 +6,13 @@
 
 Fork, clone, branch (training), and bundle install.
 
+## Prerequisites
+
+-   [Ruby Array Methods](https://github.com/ga-wdi-boston/ruby-array-methods)
+
 ## Objectives
 
-By the end of this lesson, students should be able to:
+By the end of this talk, developers should be able to:
 
 -   Define “list” and give two examples of lists in Ruby.
 -   Diagram the flow of Enumerable methods as invoked through concrete classes.
