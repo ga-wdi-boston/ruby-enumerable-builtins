@@ -38,7 +38,8 @@ What are some things we'd put on those lists?
 ## Arrays as lists
 
 In JavaScript, the concept of list is built into Array. In Ruby, it is built
- into Enumerable which is included in Array.
+into Enumerable which is included in Ruby's
+[Array](https://ruby-doc.org/core-2.3.1/Array.html).
 
 ### Deeper look
 
@@ -58,7 +59,7 @@ Where is method `all?`?  Method `reduce`?
 
 ## The Enumerable Module
 
-Ruby's [Enumerable](http://ruby-doc.org/core-2.3.0/Enumerable.html) module
+Ruby's [Enumerable](https://ruby-doc.org/core-2.3.1/Enumerable.html) module
  provides many list processing methods relying on a class's `each` method.
 Ruby's Array class includes the Enumerable module.
 
