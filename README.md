@@ -105,6 +105,9 @@ In `bin/range_lab.rb`, use `reduce` to calculate the sum of all the even
 numbers in a Range. All the odd numbers.  Now use `each_with_object` to do both
 at once.
 
+Hint: [Better Hash Injection using
+each_with_object](http://technology.customink.com/blog/2014/10/14/better-hash-injection-using-each-with-object/)
+
 ## Hashes as lists
 
 [Hash](http://ruby-doc.org/core-2.3.0/Hash.html) includes Enumerable so we can
