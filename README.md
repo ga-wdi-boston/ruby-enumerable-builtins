@@ -92,7 +92,7 @@ we can treat instances as a list.
 ### Demo - Range
 
 ```ruby
-> rng = 1..10
+rng = 1..10
 ```
 
 ### Code along - Range
@@ -113,7 +113,7 @@ treat it as a list.
 ### Demo - Hash
 
 ```ruby
-> h = {}
+h = {}
 ```
 
 ### Code along - Hash
