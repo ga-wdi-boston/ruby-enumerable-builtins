@@ -129,6 +129,9 @@ In `bin/hash_lab.rb`, use `reduce` to accumulate all of the keys and values in
 a Hash as Arrays. Store these keys and values in a memo Hash with the keys
 `:keys` and `:values`. Now use `each_with_object` to do the same.
 
+Run the linter after you complete the `reduce` task. Notice a curious linter
+warning? Fix all the rest, then continue.
+
 ## Additional resources
 
 Two images to give you a sense of the relationships in Ruby.
