@@ -2,10 +2,6 @@
 
 # Ruby Enumerable Built-ins
 
-## Instructions
-
-Fork, clone, branch (training), and bundle install.
-
 ## Prerequisites
 
 -   [Ruby Array Methods](https://github.com/ga-wdi-boston/ruby-array-methods)
@@ -17,7 +13,15 @@ By the end of this talk, developers should be able to:
 -   Define “list” and give two examples of lists in Ruby.
 -   Diagram the flow of Enumerable methods as invoked through concrete classes.
 -   Give two examples of methods defined in Enumerable and available on all
- three of Range, Array, and Hash.
+    three of Range, Array, and Hash.
+
+## Preparation
+
+1.  Fork and clone this repository.
+ [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
+1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
+1.  Install dependencies with `npm install`.
 
 ## Introduction
 
