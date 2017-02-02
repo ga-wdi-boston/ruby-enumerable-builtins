@@ -33,9 +33,7 @@ Enumerable is Ruby's implementation of the `list` abstraction.
 
 ## Lists are ubiquitous
 
-### Brainstorm
-
-What are some types of lists?
+What are some types of lists? Let's brainstorm.
 
 What are some things we'd put on those lists?
 
@@ -45,10 +43,9 @@ In JavaScript, the concept of list is built into Array. In Ruby, it is built
 into Enumerable which is included in Ruby's
 [Array](https://ruby-doc.org/core-2.3.1/Array.html).
 
-### Deeper look
-
 The following table contains a mapping of some of the methods that potentially
- touch all the elements in an Array.
+touch all the elements in an Array. We've already covered most of these in
+[Ruby Array Methods](https://github.com/ga-wdi-boston/ruby-array-methods).
 
 | JavaScript | Ruby     |
 | ---------- | ----     |
@@ -59,7 +56,10 @@ The following table contains a mapping of some of the methods that potentially
 | `reduce`   | `reduce` |
 | `some`     | `any?`   |
 
-Where is method `all?`?  Method `reduce`?
+But, wait. Where is the method `all?` defined? The method `reduce`? They're
+from the `Enumerable` mix-in, and will be the focus of this talk. "Enumerable"
+is another word for "iteratable", so we can say that each of Ruby's `Array`,
+`Range`, and `Hash` types behave as something that can be iterated-over.
 
 ## The Enumerable Module
 
