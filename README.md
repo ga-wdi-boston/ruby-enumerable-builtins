@@ -27,7 +27,7 @@ By the end of this talk, developers should be able to:
 
 A list is an abstract data type (ADT) that represents an ordered list of items.
 The list may be empty.  If not empty, the list has a first item followed by a
- list containing the rest of the items. This is not a rigorous definition.
+list containing the rest of the items. This is not a rigorous definition.
 
 Enumerable is Ruby's implementation of the `list` abstraction.
 
@@ -64,20 +64,20 @@ is another word for "iteratable", so we can say that each of Ruby's `Array`,
 ## The Enumerable Module
 
 Ruby's [Enumerable](https://ruby-doc.org/core-2.3.1/Enumerable.html) module
- provides many list processing methods relying on a class's `each` method.
+provides many list processing methods relying on a class's `each` method.
 Ruby's Array class includes the Enumerable module.
 
 ### Modules
 
-In Ruby, modules serve two purposes.  The first is to create name spaces.
-The second is to supply common behavior to a class.
+In Ruby, modules serve two purposes.  The first is to create name spaces. The
+second is to supply common behavior to a class.
 
 The `Math` module hides mathematical functions inside the name-space `Math` so
- that short and common names don't pollute the global name-space
- (e.g. `Math::PI` or `Math.cos`).
+that short and common names don't pollute the global name-space (e.g.
+`Math::PI` or `Math.cos`).
 
 The `Enumerable` module contains code implementing list methods in terms of a
- concrete class's `each` method.
+concrete class's `each` method.
 
 ### The connection
 
@@ -86,8 +86,8 @@ Let's diagram the delegation from Array to Enumerable and back.
 ## Ranges as lists
 
 Ruby's [Range](http://ruby-doc.org/core-2.3.0/Range.html) class provides a
- convenient way to express a sequence of integers.
-Range includes Enumerable so we can treat instances as a list.
+convenient way to express a sequence of integers. Range includes Enumerable so
+we can treat instances as a list.
 
 ### Demo - Range
 
@@ -101,14 +101,14 @@ Let's explore using Range as an enumerable in `bin/range_list.rb`.
 
 ### Lab - Range
 
-In `bin/range_lab.rb`, use `reduce` to calculate the sum of all the even numbers
- in a Range.
-All the odd numbers.  Now use `each_with_object` to do both at once.
+In `bin/range_lab.rb`, use `reduce` to calculate the sum of all the even
+numbers in a Range. All the odd numbers.  Now use `each_with_object` to do both
+at once.
 
 ## Hashes as lists
 
 [Hash](http://ruby-doc.org/core-2.3.0/Hash.html) includes Enumerable so we can
- treat it as a list.
+treat it as a list.
 
 ### Demo - Hash
 
@@ -122,10 +122,9 @@ Let's explore using Hash as an enumerable in `bin/hash_list.rb`.
 
 ### Lab - Hash
 
-In `bin/hash_lab.rb`, use `reduce` to accumulate all of the keys and values in a
- Hash as Arrays.
-Store these keys and values in a memo Hash with the keys `:keys` and `:values`.
-Now use `each_with_object` to do the same.
+In `bin/hash_lab.rb`, use `reduce` to accumulate all of the keys and values in
+a Hash as Arrays. Store these keys and values in a memo Hash with the keys
+`:keys` and `:values`. Now use `each_with_object` to do the same.
 
 ## Additional resources
 
@@ -135,7 +134,7 @@ Two images to give you a sense of the relationships in Ruby.
 -   [And not](http://i.stack.imgur.com/1taqB.png)
 
 These images may diverge slightly from the actual relationships, Ruby is an
- evolving language, but do give a sense of much of what goes on.
+evolving language, but do give a sense of much of what goes on.
 
 ## [License](LICENSE)
 
