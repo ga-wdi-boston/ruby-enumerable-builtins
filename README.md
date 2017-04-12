@@ -21,7 +21,7 @@ By the end of this talk, developers should be able to:
  [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
 1.  Create a new branch, `training`, for your work.
 1.  Checkout to the `training` branch.
-1.  Install dependencies with `npm install`.
+1.  Install dependencies with `bundle install`.
 
 ## Introduction
 
